@@ -16,7 +16,7 @@ class AbstractFactoryTest extends TestCase
     public function providerFactory(){
         return [
             [new UnixWriterFactory()],
-            //[new WinWriterFactory()]
+            [new WinWriterFactory()]
         ];
     }
 
