@@ -1,6 +1,6 @@
 <?php
 
-namespace DesignPAtterns\Creational\AbstractFactory;
+namespace DesignPatterns\Creational\AbstractFactory;
 
 class WinWriterFactory implements WriterFactory
 {

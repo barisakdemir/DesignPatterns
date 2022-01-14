@@ -1,6 +1,6 @@
 <?php
 
-namespace Designpatterns\Creational\AbstractFactory;
+namespace DesignPatterns\Creational\AbstractFactory;
 
 class WinJsonWriter implements JsonWriter
 {

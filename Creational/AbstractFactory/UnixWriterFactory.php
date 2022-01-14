@@ -2,7 +2,7 @@
 
 namespace DesignPatterns\Creational\AbstractFactory;
 
-class UnixWriterFactory implements UnixWriterFactory
+class UnixWriterFactory implements WriterFactory
 {
     public function createCsvWriter(): CsvWriter
     {

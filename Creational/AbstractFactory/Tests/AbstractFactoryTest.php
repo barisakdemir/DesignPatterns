@@ -9,21 +9,21 @@ use DesignPatterns\Creational\AbstractFactory\JsonWriter;
 use DesignPatterns\Creational\AbstractFactory\UnixWriterFactory;
 use DesignPatterns\Creational\AbstractFactory\WinWriterFactory;
 use DesignPatterns\Creational\AbstractFactory\WriterFactory;
-Use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestCase;
 
 class AbstractFactoryTest extends TestCase
 {
-    public function provideFactory(){
+    public function providerFactory(){
         return [
             [new UnixWriterFactory()],
-            [new WinWriterFactory()]
+            //[new WinWriterFactory()]
         ];
     }
 
     /**
      * @dataProvider providerFactory
     */
-    public function testCanCreateCsvWriterOnUnix(WriteFactory $writeFactory)
+    public function testCanCreateCsvWriterOnUnix(WriterFactory $writerFactory)
     {
         $this->assertInstanceOf(JsonWriter::class, $writerFactory->createJsonWriter());
         $this->assertInstanceOf(CsvWriter::class, $writerFactory->createCsvWriter());
